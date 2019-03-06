@@ -10,7 +10,7 @@ export class TaskbarComponent implements OnInit, AfterViewInit {
   componentRef: ComponentRef<BareWindowComponent>;
   resolver: ComponentFactoryResolver;
 
-  @ViewChild("windowcontainer", { read: ViewContainerRef }) container;
+  @ViewChild("container", { read: ViewContainerRef }) container;
 
   constructor(r: ComponentFactoryResolver) { 
     this.resolver = r;
