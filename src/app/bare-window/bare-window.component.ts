@@ -1,10 +1,16 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'bare-window',
-    templateUrl: './bare-window.component.html',
-    styles: ['div {height: 200px; width: 200px; background-color: red}']
+  selector: 'bare-window-root',
+  templateUrl: './bare-window.component.html',
+  styleUrls: ['./bare-window.component.css']
 })
 export class BareWindowComponent{
-  title = 'bare-window'
+  id : string;
+  name : string;
+
+  constructor(){
+    this.id = "window";
+    this.name = "New Window";
+  }
 }

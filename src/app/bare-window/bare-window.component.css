@@ -1,0 +1,25 @@
+.window {
+    border-width: 3px;
+    width: 200px;
+    height: 200px;
+    background-color: #C0C0C0;
+  }
+.top-bar{
+    background-color: #000080;
+    width: 100%;
+    height: 20px;
+}
+.window-body{
+    width:100%;
+    height:100%;
+}
+mwlResizable {
+    box-sizing: border-box;
+}
+.window-title{
+    position: relative;
+    color: white;    
+}
+.windows-menu{
+    width: 10%;
+}
