@@ -6,7 +6,7 @@ import {BareWindowComponent} from '../bare-window/bare-window.component';
   templateUrl: './taskbar.component.html',
   styleUrls: ['./taskbar.component.css']
 })
-export class TaskbarComponent implements OnInit, AfterViewInit {
+export class TaskbarComponent implements OnInit {
   componentRef: ComponentRef<BareWindowComponent>;
   resolver: ComponentFactoryResolver;
 
@@ -14,10 +14,6 @@ export class TaskbarComponent implements OnInit, AfterViewInit {
 
   constructor(r: ComponentFactoryResolver) { 
     this.resolver = r;
-  }
-
-  public ngAfterViewInit(): void
-  {
   }
 
   ngOnInit() {
