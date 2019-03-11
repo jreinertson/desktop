@@ -4,7 +4,8 @@
 (resizeEnd)="onResizeEnd($event)">
     <div class="top-bar" cdkDragHandle>
             <span class="window-title">{{ name }}</span>
-            <span class="windows-menu"></span>
+            <span class="pad"></span>
+            <span class="windows-menu" (click)="close()">X</span>
     </div>
     <div class="window-body">
 

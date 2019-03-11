@@ -1,5 +1,4 @@
-import { Component, OnInit,AfterViewInit, ViewChild,ViewContainerRef,ComponentFactoryResolver, ComponentFactory,ComponentRef } from '@angular/core';
-import {BareWindowComponent} from '../bare-window/bare-window.component';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-taskbar',
@@ -7,21 +6,9 @@ import {BareWindowComponent} from '../bare-window/bare-window.component';
   styleUrls: ['./taskbar.component.css']
 })
 export class TaskbarComponent implements OnInit {
-  componentRef: ComponentRef<BareWindowComponent>;
-  resolver: ComponentFactoryResolver;
-
-  @ViewChild("container", { read: ViewContainerRef }) container;
-
-  constructor(r: ComponentFactoryResolver) { 
-    this.resolver = r;
-  }
 
   ngOnInit() {
   }
   
 
-  public newWindow(){
-    const factory: ComponentFactory<BareWindowComponent> = this.resolver.resolveComponentFactory(BareWindowComponent);      
-    this.componentRef = this.container.createComponent(factory);
-  }
 }

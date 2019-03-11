@@ -6,11 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./bare-window.component.css']
 })
 export class BareWindowComponent{
-  id : string;
-  name : string;
+  public id : string;
+  public name : string;
 
   constructor(){
     this.id = "window";
     this.name = "New Window";
   }
+
+  public close(){
+    
+  }
+
 }
