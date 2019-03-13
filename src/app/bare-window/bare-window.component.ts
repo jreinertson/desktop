@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {WindowService} from '../windowService.service';
 
 @Component({
   selector: 'bare-window-root',
@@ -8,14 +9,16 @@ import { Component } from '@angular/core';
 export class BareWindowComponent{
   public id : string;
   public name : string;
+  windowService:WindowService;
 
-  constructor(){
+  constructor(windowService:WindowService){
     this.id = "window";
     this.name = "New Window";
+    this.windowService = windowService;
   }
 
   public close(){
-    
+    this.windowService.removeWindow(this.id);
   }
 
 }
