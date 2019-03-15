@@ -19,10 +19,14 @@ export class AppComponent {
     this.windowService = windowService;
   }
 
-
+id:number = 0;
 public newWindow(){
-  const factory: ComponentFactory<BareWindowComponent> = this.resolver.resolveComponentFactory(BareWindowComponent);      
-  this.windowService.addWindow(this.container.createComponent(factory), "testid");
+  const factory: ComponentFactory<BareWindowComponent> = this.resolver.resolveComponentFactory(BareWindowComponent);
+  var comp =  this.container.createComponent(factory);
+  this.id++;
+  comp.instance.id = this.id;
+  comp.instance.name = 'New Window';
+  this.windowService.addWindow(comp, this.id);
 }
 
 }

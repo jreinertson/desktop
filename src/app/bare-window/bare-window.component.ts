@@ -7,12 +7,12 @@ import {WindowService} from '../windowService.service';
   styleUrls: ['./bare-window.component.css']
 })
 export class BareWindowComponent{
-  public id : string;
+  public id : number;
   public name : string;
   windowService:WindowService;
 
   constructor(windowService:WindowService){
-    this.id = "window";
+    this.id = 0;
     this.name = "New Window";
     this.windowService = windowService;
   }
