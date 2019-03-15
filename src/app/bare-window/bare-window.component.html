@@ -1,10 +1,11 @@
-<div class="window" cdkDrag mwlResizable
+<div ng-hide="min" class="window" cdkDrag mwlResizable
 [enableGhostResize]="false"
 [resizeEdges]="{bottom: true, right: true, top: false, left: false}"
-(resizeEnd)="onResizeEnd($event)">
+(resizeEnd)="onResizeEnd($event)" >
     <div class="top-bar" cdkDragHandle>
             <span class="window-title">{{ name }}</span>
             <span class="pad"></span>
+            <span class="windows-menu" (click)="minimize()">-</span>            
             <span class="windows-menu" (click)="close()">X</span>
     </div>
     <div class="window-body">

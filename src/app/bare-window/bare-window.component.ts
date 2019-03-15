@@ -10,6 +10,7 @@ export class BareWindowComponent{
   public id : number;
   public name : string;
   windowService:WindowService;
+  public min:boolean = false;
 
   constructor(windowService:WindowService){
     this.id = 0;
@@ -18,7 +19,13 @@ export class BareWindowComponent{
   }
 
   public close(){
+    console.log("closing window");
     this.windowService.removeWindow(this.id);
+  }
+
+  public minimize(){
+    console.log("minimizing window");    
+    this.min= true;
   }
 
 }

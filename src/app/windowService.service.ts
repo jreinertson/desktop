@@ -16,7 +16,7 @@ export class WindowService {
     }
 
     public minimize(id:number){
-        //hide the element here
+        
     }
 
     public maximize(id:number){
