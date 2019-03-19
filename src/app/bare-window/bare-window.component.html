@@ -1,7 +1,4 @@
-<div ng-hide="min" class="window" cdkDrag mwlResizable
-[enableGhostResize]="false"
-[resizeEdges]="{bottom: true, right: true, top: false, left: false}"
-(resizeEnd)="onResizeEnd($event)" >
+<div ng-hide="min" class="window" cdkDrag>
     <div class="top-bar" cdkDragHandle ng-hide="min">
             <span class="window-title">{{ name }}</span>
             <span class="pad"></span>

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import { ResizableModule } from 'angular-resizable-element';
+//import { ResizableModule } from 'angular-resizable-element';
 
 import {WindowService} from './windowService.service';
 import { AppComponent } from './app.component';
@@ -17,7 +17,7 @@ import { TaskbarComponent } from './taskbar/taskbar.component';
   imports: [
     BrowserModule,
     DragDropModule,
-    ResizableModule,
+    //ResizableModule,
   ],
   providers: [WindowService],
   bootstrap: [AppComponent, BareWindowComponent, TaskbarComponent]
