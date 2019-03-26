@@ -1,5 +1,5 @@
-<div ng-hide="min" class="window" cdkDrag>
-    <div class="top-bar" cdkDragHandle ng-hide="min">
+<div [hidden]="minimized" class="window" cdkDrag>
+    <div class="top-bar" cdkDragHandle>
             <span class="window-title">{{ name }}</span>
             <span class="pad"></span>
             <span class="windows-menu" (click)="minimize()">-</span>            

@@ -29,7 +29,6 @@ export class BrowserWindowComponent implements OnInit {
   }
 
   public minimize(){
-    console.log("minimizing window");    
     this.min= true;
   }
 

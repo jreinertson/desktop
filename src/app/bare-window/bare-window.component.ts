@@ -10,7 +10,7 @@ export class BareWindowComponent{
   public id : number;
   public name : string;
   windowService:WindowService;
-  public min:boolean = false;
+  public minimized:boolean = false;
 
   constructor(windowService:WindowService){
     this.id = 0;
@@ -24,8 +24,7 @@ export class BareWindowComponent{
   }
 
   public minimize(){
-    console.log("minimizing window");    
-    this.min= true;
+    this.minimized= true;
   }
 
 }
