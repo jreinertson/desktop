@@ -4,7 +4,7 @@ import {BareWindowComponent} from './bare-window/bare-window.component';
 
 @Injectable()
 export class WindowService {
-    windows: { [key:number]:ComponentRef<BareWindowComponent>; } = {}
+    public windows: { [key:number]:ComponentRef<BareWindowComponent>; } = {}
 
     public addWindow(window :ComponentRef<BareWindowComponent>, id:number){
         this.windows[id] = window;
