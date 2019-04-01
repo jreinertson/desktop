@@ -26,7 +26,7 @@ export class BareWindowComponent{
 
   public minimize(){
     this.minimized= true;
-    this.windowService.minimize(this.id);
+    this.windowService.minimizeFromWindow(this.id);
   }
 
   

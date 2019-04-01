@@ -29,14 +29,18 @@ export class TaskbarComponent implements OnInit {
     delete this.windows[id];
   }
 
-  public maximize(id:number){
-    console.log("maximizing " + id);
-    this.windowService.maximize(id);
-  }
-
   public addWindow(id:number, name:string){
     this.windows[id] = name;
   }
+
+ public onValChange(value, id){
+    if(value){
+      this.windowService.minimizeFromTaskbar(id);
+    }
+    else{
+      this.windowService.maximize(id);
+    }
+ } 
 
 
 }

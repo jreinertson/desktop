@@ -1,5 +1,5 @@
 <div class="mainBar">        
         <mat-button-toggle-group multiple=true>
-        <mat-button-toggle *ngFor="let window of windows | keyvalue">{{window.value}}</mat-button-toggle>
+        <mat-button-toggle *ngFor="let window of windows | keyvalue"  (change)="onValChange($event.source.checked, window.key)" style="color:#455A64" >{{window.value}}</mat-button-toggle>
         </mat-button-toggle-group>
 </div>
