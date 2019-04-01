@@ -10,6 +10,7 @@ export class WindowService {
 
     public addWindow(window :ComponentRef<BareWindowComponent>, id:number){
         this.windows[id] = window;
+        this.taskbarContext.addWindow(id, "New Window");
     }
     
     public removeWindow(id:number){

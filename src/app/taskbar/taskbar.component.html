@@ -1,3 +1,5 @@
-<div class="mainBar">
-        <button (click)="maximize(1)">Maximize window 1</button>
+<div class="mainBar">        
+        <mat-button-toggle-group multiple=true>
+        <mat-button-toggle *ngFor="let window of windows | keyvalue">{{window.value}}</mat-button-toggle>
+        </mat-button-toggle-group>
 </div>

@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { BareWindowComponent } from './bare-window/bare-window.component';
 import { TaskbarComponent } from './taskbar/taskbar.component';
 import { BrowserWindowComponent } from './browser-window/browser-window.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { BrowserWindowComponent } from './browser-window/browser-window.componen
   imports: [
     BrowserModule,
     DragDropModule,
+    MatButtonToggleModule
     //ResizableModule,
   ],
   providers: [WindowService],

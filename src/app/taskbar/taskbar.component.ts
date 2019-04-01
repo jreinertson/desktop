@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {WindowService} from '../windowService.service';
+import {MatIconRegistry} from '@angular/material';
 
 @Component({
   selector: 'app-taskbar',
@@ -12,7 +13,7 @@ export class TaskbarComponent implements OnInit {
   }
   windowService:WindowService; 
   
-  public windows: { [key:number]:string; } = {} //string to test for now 
+  public windows: { [key:number]:string; } = {} //string to test for now
 
   constructor(windowService:WindowService){
     this.windowService = windowService;
@@ -25,11 +26,16 @@ export class TaskbarComponent implements OnInit {
 
   public onClose(id:number){
     console.log("closing " + id);
+    delete this.windows[id];
   }
 
   public maximize(id:number){
     console.log("maximizing " + id);
     this.windowService.maximize(id);
+  }
+
+  public addWindow(id:number, name:string){
+    this.windows[id] = name;
   }
 
 
